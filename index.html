@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sneha's Portfolio Website</title>
+    <link rel="stylesheet" href="Style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500&family=Open+Sans:wght@300;400;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+.toolbar{
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    padding: 4px 0;
+    background: #4d4c48; 
+    font-family: 'Montserrat', sans-serif;
+}
+.toolbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.toolbar .tools li{
+     list-style: none;
+     display: inline-block;
+ }
+.toolbar .tools li a{
+    color: #f7dfa5;
+    font-size: 20px;
+    font-weight: 400;
+    margin-right: 20px;
+    transition: color 0.4s ease;
+}
+.toolbar .tools li a:hover{
+    color: #d73554;
+    background: none;
+}
+/*about section css*/
+section{
+    padding: 100px 0;
+}
+.about{
+    color: #d73554;
+    background: #f7dfa5;
+    height: 100vh;
+}
+.about, .academics,.interest, .contact{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+.about .about-inhome, 
+.academics .academics-inhome,
+.interest .interests-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+section .heading{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+.about .heading::before{
+    content: "";
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    width: 210px;
+    height: 3px;
+    background:white;
+    transform: translateX(-50%);
+}
+.about .about-inhome .left{
+    width: 45%;  
+}
+
+.about .about-inhome .left img{
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-bottom: 7px;
+}
+.about .about-inhome .right{
+    width: 55%;  
+}
+.about .about-inhome .right .matter{
+    font-size: 60px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.about .about-inhome .right p1{
+    font-size: 30px;
+    font-weight: 700;
+}
+
+/*academics section css*/
+.academics{
+    color: #d73554;
+    background: #d73554;
+    height: 100vh;
+}
+.academics .heading{
+   color: #f7dfa5;
+}
+.academics .academics-inhome .Card{
+    width: calc(33% - 20px);
+    background: #f7dfa5;
+    text-align: center;
+    border-radius: 7px;
+    padding: 20px 25px;
+    cursor: pointer;
+    font-weight: 600;
+    transform: scale(1.05);
+    margin-bottom: 50px;
+    width: calc(50%-10px);
+    margin-bottom: 20px;
+}
+.academics .academics-inhome .Card .box{
+    transition: all 0.4s ease;
+}
+.academics .academics-inhome .Card:hover .box{
+    transform: scale(1.15);
+}
+.academics .academics-inhome .Card .text{
+    font-size: 30px;
+    font-weight: 600;
+    margin: 15px 0 7px 0;
+}
+.academics .heading::before{
+    content: "";  
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    width: 230px;
+    height: 3px;
+    background:white;
+    transform: translateX(-50%);
+}
+
+/*interests section css*/
+.interest{
+    color: #f7dfa5;
+    background: #f7dfa5;
+     height: 100vh;
+}
+.interest .heading{
+    color: #d73554
+}
+.interest .interests-content .Card{
+    width: calc(33% - 20px);
+    background: #d73554;
+    text-align: center;
+    border-radius: 7px;
+    padding: 20px 25px;
+    cursor: pointer;
+    font-weight: 600;
+    transform: scale(1.05);
+    margin-bottom: 50px;
+    width: calc(50%-10px);
+    margin-bottom: 20px;
+}
+.interest .interests-content .Card {
+    transition: all 0.4s ease;
+}
+.interest .interests-content .Card:hover {
+    transform: scale(1.125);
+}
+.interest .interests-content .Card .text{
+    font-size: 30px;
+    font-weight: 600;
+    margin: 15px 0 7px 0;
+}
+.interest .heading::before{
+    content: "";  
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: white;
+    transform: translateX(-50%);
+}
+
+.contact .heading::before{
+    content: "";  
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    width: 160px;
+    height: 3px;
+    background: white;
+    transform: translateX(-50%);
+}
+.contact{
+    color: #f7dfa5;
+    background: #d73554;
+     height: 100vh;
+    }
+.home{
+    display: flex;
+    background-image: url(Pic3.png);
+    background-size: cover;
+    height: 100vh;
+    color: #d73554;
+    min-height: 600px; 
+    font-family: 'Montserrat', sans-serif;   
+}
+.home .max-width{
+    margin: auto 0 auto 50px;
+}
+.home .inhome .text1{
+    font-size: 75px;
+    font-weight: 500;
+    margin-left: -3px;
+}
+.home .inhome .text2{
+    font-size: 45px;
+    font-weight: 500;
+    margin-left: -3px;
+}
+.home .inhome .text3{
+    font-size: 75px;
+    font-weight: 700;
+    margin-left: -3px;
+}
+.home .inhome .text4{
+    font-size: 75px;
+    font-weight: 700;
+    margin-left: -3px;   
+}
+ol{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+ol li{
+    position: relative;
+    display: block;
+    font-size: 100px;
+    background: #4d4c48;
+    height: 200px;
+    width: 200px;
+    line-height: 200px;
+    border-radius: 50%;
+    margin: 0 15px;
+    cursor: pointer;
+    transform: scale(1.05);
+}
+a {
+    color: #f7dfa5;
+  }
+.fab{
+    transition: all 0.4s ease;
+}
+.fab:hover{
+    transform: scale(1.15);
+}
+
+</style> 
+
+<body>
+    <nav class="toolbar">
+    <div class="max-width">
+        <div class="logo"><img src="Logo.png" width="160" height="80"></div>    
+        <ul class="tools">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#academics">Academics</a></li>
+            <li><a href="#interests">Interests</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        </div>
+    </nav>
+
+    <section class="home" id="home">
+        <div class="max-width">
+            <div class="inhome">
+                <div class="text1">Welcome</div>
+                <div class="text2">to my</div>
+                <div class="text3">Portfolio</div>
+                <div class="text4">website</div> 
+            </div>
+        </div>
+    </section>
+<section class="about" id="about">
+    <div class="max-width">
+        <h2 class="heading">About Me</h2>
+        <div class="about-inhome">
+<div class="column left">
+    <img src="Sneha.jpg">
+</div>
+<div class="column right">
+    <div class="matter">
+      Hello!
+      <p>I'm Sneha Arisetti<p>
+    </div>
+    <p1>
+         I am a fresher at IIT-KGP. I am from Andhra Pradesh. Can't wait for the Pandemic to end and get back to old-normal. 
+    </p1>
+</div>
+        </div>
+    </div>
+</section>
+<section class="academics" id="academics">
+    <div class="max-width">
+        <h2 class="heading">Academics</h2>
+        <div class="academics-inhome">
+            <div class="Card">
+                <div class="box">
+                 
+                 <div class="text">Sri Chaitanya Techno School, Tadepalligudem</div> 
+                 <p>
+                     I had a little long memorable relation with my school situated in my hometown and passed the boards in  2018.
+                 </p>
+                </div>
+            </div>
+
+            <div class="Card">
+                <div class="box">
+                 
+                 <div class="text">Sri Chaitanya Junior College, Saraswati Bhavan</div> 
+                 <p>
+                    I have completed my Eleventh and Twelth Standards here away from home and passed boards and JEE in the year 2020.    
+                </p>
+                </div>
+            </div>
+
+            <div class="Card">
+                <div class="box">
+                 
+                 <div class="text">Indian Institute of Technology, Kharagpur</div> 
+                 <p>
+                    Currently pursuing First year B.Tech at IIT Kharagpur. I am from Metallurgy and Materials Engineering Branch.
+                 </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<section class="interest" id="interests">
+    <div class="max-width">
+        <h2 class="heading">Interests</h2>
+        <div class="interests-content">
+            <div class="Card">
+                <div class="box">
+                 
+                 <div class="text">Literature</div> 
+                 <p>
+                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi laboriosam, pariatur esse quaerat asperiores earum?
+                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi laboriosam, pariatur esse quaerat asperiores earum?
+                 </p>
+                </div>
+            </div>
+
+            <div class="Card">
+                <div class="box">
+                 
+                 <div class="text">Movies</div> 
+                 <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi laboriosam, pariatur esse quaerat asperiores earum?
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi laboriosam, pariatur esse quaerat asperiores earum?     
+                </p>
+                </div>
+            </div>
+
+            <div class="Card">
+                <div class="box">
+                 
+                 <div class="text">Food</div> 
+                 <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi laboriosam, pariatur esse quaerat asperiores earum?
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi laboriosam, pariatur esse quaerat asperiores earum?
+                 </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section> 
+   <section class="contact" id="contact">
+    <div class="max-width">
+           <h2 class="heading">Contact</h2>
+           <ol>
+            <li><a href="https://www.facebook.com/profile.php?id=100009352905139"><i class="fab fa-facebook-f"></a></i></li>
+            <li><a href="https://www.instagram.com/sneha_arisetti_109/"><i class="fab fa-instagram"></a></i></li>
+            <li><a href="https://twitter.com/ArisettiSneha"><i class="fab fa-twitter"></a></i></li>
+            <li><a href="https://github.com/snehaarisetti"><i class="fab fa-github"></a></i></li>
+           </ol>
+    </div>
+   </section>
+</body>
+</html>
